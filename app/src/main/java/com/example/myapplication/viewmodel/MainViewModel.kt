@@ -3,6 +3,7 @@ package com.example.myapplication.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.myapplication.model.Films
 import com.example.myapplication.model.Person
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,4 +20,6 @@ class MainViewModel(val repository: PersonRepository):ViewModel() {
     }
     val personName:LiveData<Person>
     get() = repository.person
+
+
 }
